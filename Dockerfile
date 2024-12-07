@@ -2,7 +2,7 @@
 FROM node:lts-alpine
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /sever
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -17,7 +17,7 @@ COPY . .
 COPY .env .env
 
 # Expose the port the app runs on
-EXPOSE 8080
+EXPOSE 3000
 
 # Define the command to run the app
 CMD ["npm", "run", "dev"]
